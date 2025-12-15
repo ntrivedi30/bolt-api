@@ -1,0 +1,23 @@
+# --- Python & Runtime ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+.venv/
+venv/
+env/
+
+# --- Distribution & Build ---
+dist/
+build/
+*.egg-info/
+
+# --- Tools & Caches ---
+.idea/
+.vscode/
+.DS_Store
+
+# --- Databases ---
+*.db
+*.sqlite3
