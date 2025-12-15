@@ -1,26 +1,50 @@
-# Bolt API Framework
+# ⚡ Bolt
 
-A high-performance, async Python web framework built on **Granian** and **msgspec**.
-Designed for maximum throughput and zero overhead.
+**A high-performance, async Python web framework built on Granian and msgspec.**
+Designed for maximum throughput, zero overhead, and developer ergonomics.
 
-## Features
-- **Zero-Copy Validation** using `msgspec`
-- **Leak-Proof Dependency Injection** for Databases
-- **Auto-Generated Swagger UI** (`/docs`)
-- **Background Tasks** built-in
-- **Granian**: Rust-based ASGI server.
-- **msgspec**: The fastest JSON serialization/validation library.
-- **Starlette**: The lightweight ASGI toolkit.
+---
+
+## 🚀 Why Bolt?
+Most Python frameworks trade performance for ease of use. Bolt does not.
+It sits directly on top of **Granian** (Rust-based ASGI) and uses **msgspec** for zero-copy JSON validation, making it significantly faster than standard FastAPI setups while maintaining the same developer experience.
+
+## ✨ Features
+- **⚡ Blazing Fast:** Built on **Granian** (Rust) and **Starlette**.
+- **📏 Zero-Copy Validation:** Powered by `msgspec` (10-50x faster than Pydantic).
+- **🛡️ Leak-Proof Dependency Injection:** Robust resource management for Databases.
+- **📑 Auto-Generated Docs:** Swagger UI (`/docs`) and ReDoc (`/redoc`) built-in.
+- **⏳ Background Tasks:** Fire-and-forget task handling out of the box.
+
+## 📦 Installation
+
+**From GitHub (Recommended for now):**
+```bash
+pip install git+[https://github.com/ntrivedi30/bolt-api.git](https://github.com/YOUR_USERNAME/bolt-api.git)
 
 
-## Quick Start
-
-```python
+## 📦 Quickstart
+```
 from bolt import Bolt
 from bolt.background import BackgroundTasks
 
 app = Bolt()
 
+# 1. Simple Endpoint
 @app.get("/")
 async def home():
     return {"message": "Hello from Bolt ⚡"}
+
+# 2. Path Parameters & Validation
+@app.get("/items/{item_id}")
+async def read_item(item_id: int):
+    return {"item_id": item_id}
+
+# 3. Background Tasks
+async def send_email(email: str):
+    print(f"📧 Sending email to {email}...")
+
+@app.post("/signup")
+async def signup(email: str, tasks: BackgroundTasks):
+    tasks.add_task(send_email, email)
+    return {"status": "User created", "message": "Email queued"}
