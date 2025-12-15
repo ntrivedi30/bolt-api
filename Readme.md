@@ -10,11 +10,11 @@ Most Python frameworks trade performance for ease of use. Bolt does not.
 It sits directly on top of **Granian** (Rust-based ASGI) and uses **msgspec** for zero-copy JSON validation, making it significantly faster.
 
 ## Features
-- ** Blazing Fast:** Built on **Granian** (Rust) and **Starlette**.
-- ** Zero-Copy Validation:** Powered by `msgspec`.
-- ** Leak-Proof Dependency Injection:** Robust resource management for Databases.
-- ** Auto-Generated Docs:** Swagger UI (`/docs`) and ReDoc (`/redoc`) built-in.
-- ** Background Tasks:** Fire-and-forget task handling.
+- **Blazing Fast:** Built on **Granian** (Rust) and **Starlette**.
+- **Zero-Copy Validation:** Powered by `msgspec`.
+- **Leak-Proof Dependency Injection:** Robust resource management for Databases.
+- **Auto-Generated Docs:** Swagger UI (`/docs`) and ReDoc (`/redoc`) built-in.
+- **Background Tasks:** Fire-and-forget task handling.
 
 ## Design Philosophy
 
