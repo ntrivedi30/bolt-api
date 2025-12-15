@@ -1,21 +1,19 @@
-# ⚡ Bolt Framework
+# Bolt API Framework
 
 A high-performance, async Python web framework built on **Granian** and **msgspec**.
 Designed for maximum throughput and zero overhead.
 
-## 🚀 Features
-- **2x Faster than FastAPI** (Benchmarked at ~1,900 req/sec vs 900 req/sec)
+## Features
 - **Zero-Copy Validation** using `msgspec`
 - **Leak-Proof Dependency Injection** for Databases
 - **Auto-Generated Swagger UI** (`/docs`)
 - **Background Tasks** built-in
+- **Granian**: Rust-based ASGI server.
+- **msgspec**: The fastest JSON serialization/validation library.
+- **Starlette**: The lightweight ASGI toolkit.
 
-## Installation
 
-```bash
-pip install bolt-api
-
-## 📦 Quick Start
+## Quick Start
 
 ```python
 from bolt import Bolt
