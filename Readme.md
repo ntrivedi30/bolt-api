@@ -26,7 +26,6 @@ pip install git+https://github.com/ntrivedi30/bolt-api.git
 ## 📦 Quickstart
 ```python
 from bolt import Bolt
-from bolt.background import BackgroundTasks
 
 app = Bolt()
 
