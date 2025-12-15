@@ -30,21 +30,6 @@ from bolt.background import BackgroundTasks
 
 app = Bolt()
 
-# 1. Simple Endpoint
 @app.get("/")
 async def home():
     return {"message": "Hello from Bolt ⚡"}
-
-# 2. Path Parameters & Validation
-@app.get("/items/{item_id}")
-async def read_item(item_id: int):
-    return {"item_id": item_id}
-
-# 3. Background Tasks
-async def send_email(email: str):
-    print(f"📧 Sending email to {email}...")
-
-@app.post("/signup")
-async def signup(email: str, tasks: BackgroundTasks):
-    tasks.add_task(send_email, email)
-    return {"status": "User created", "message": "Email queued"}
