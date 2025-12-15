@@ -36,7 +36,7 @@ async def home():
 
 ## ❤️ Credits & Acknowledgements
 Bolt stands on the shoulders of giants. This framework is possible thanks to these incredible open-source projects:
-- ** Granian:** For the blazing fast Rust-based ASGI server foundation.
-- ** msgspec:** For the high-performance, zero-copy JSON serialization and validation.
-- ** Starlette:** For the robust ASGI toolkit and routing system.
-- ** Special thanks to **FastAPI** for inspiring the modern, type-safe design patterns used in this framework.
+- Granian: For the blazing fast Rust-based ASGI server foundation.
+- msgspec: For the high-performance, zero-copy JSON serialization and validation.
+- Starlette: For the robust ASGI toolkit and routing system.
+Special thanks to **FastAPI** for inspiring the modern, type-safe design patterns used in this framework.
