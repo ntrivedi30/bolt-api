@@ -21,7 +21,7 @@ It sits directly on top of **Granian** (Rust-based ASGI) and uses **msgspec** fo
 **From GitHub (Recommended for now):**
 ```bash
 pip install git+[https://github.com/ntrivedi30/bolt-api.git](https://github.com/YOUR_USERNAME/bolt-api.git)
-
+```
 
 ## 📦 Quickstart
 ```python
